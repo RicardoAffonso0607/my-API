@@ -20,6 +20,8 @@ public class Department {
     @OneToMany
     private List<Course> courses;
 
+    // Methods
+
     public void addProfessor(Professor professor) {
         this.professors.add(professor);
     }
@@ -34,6 +36,12 @@ public class Department {
 
     public void removeCourse(Course course) {
         this.courses.remove(course);
+    }
+
+    // Setters and Getters
+
+    public Integer getId() {
+        return id;
     }
 
     public String getName() {

@@ -21,6 +21,8 @@ public class Professor {
     @ManyToOne
     private Department department;
 
+    // Methods
+
     public void addCourse(Course course) {
         this.courses.add(course);
     }
@@ -30,6 +32,10 @@ public class Professor {
     }
 
     // Setters and Getters
+
+    public Integer getId() {
+        return id;
+    }
 
     public String getName() {
         return name;

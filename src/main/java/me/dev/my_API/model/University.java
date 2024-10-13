@@ -21,6 +21,12 @@ public class University {
     @OneToMany
     private List<Department> departments;
 
+    // Methods
+
+    public Integer getId() {
+        return id;
+    }
+
     public void addDepartment(Department department) {
         this.departments.add(department);
     }
@@ -28,6 +34,8 @@ public class University {
     public void removeDepartment(Department department) {
         this.departments.remove(department);
     }
+
+    // Setters and Getters
 
     public String getName() {
         return name;
