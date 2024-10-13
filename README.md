@@ -1,8 +1,20 @@
 # Java RESTful API made with Spring Boot
 
-This project 
+## Overview
 
-## Diagram
+This REST API was made to abstract an University Academic System. The main classes can be observed in the diagram below.
+
+## Technologies used
+
+- Java Spring Boot
+- Gradle 
+- H2 Database (development tests)
+- PostgreSQL (deploy)
+- JPA (to interact with the database)
+- Swagger (to make the interface and documentation)
+- Railway (to deploy the API in web)
+
+## Diagram - made with Mermaid
 
 ```mermaid
 classDiagram
@@ -53,3 +65,7 @@ classDiagram
     Course "0..*" o-- "0..*" Student : enrolls
     Professor "1" o-- "0..*" Course : teaches
 ```
+
+## Acknowledgments
+
+Thanks DIO (Digital Innovation One) and Claro for the amazing bootcamp, that includes Java Syntax and Spring boot fundamentals.
