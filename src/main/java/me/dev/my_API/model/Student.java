@@ -15,6 +15,32 @@ public class Student {
     @Column(nullable = false)
     private String name;
 
-    @ManyToMany(fetch = FetchType.EAGER)
+    @ManyToMany
     private List<Course> courses;
+
+    public void addCourse(Course course) {
+        this.courses.add(course);
+    }
+
+    public void removeCourse(Course course) {
+        this.courses.remove(course);
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public List<Course> getCourses() {
+        return courses;
+    }
+
+    public void setCourses(List<Course> courses) {
+        this.courses = courses;
+    }
+
+    
 }

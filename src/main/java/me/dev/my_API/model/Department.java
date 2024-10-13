@@ -18,8 +18,47 @@ public class Department {
     private List<Professor> professors;
 
     @OneToMany
-    private List<Student> students;
-
-    @OneToMany
     private List<Course> courses;
+
+    public void addProfessor(Professor professor) {
+        this.professors.add(professor);
+    }
+
+    public void removeProfessor(Professor professor) {
+        this.professors.remove(professor);
+    }
+
+    public void addCourse(Course course) {
+        this.courses.add(course);
+    }
+
+    public void removeCourse(Course course) {
+        this.courses.remove(course);
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public List<Professor> getProfessors() {
+        return professors;
+    }
+
+    public void setProfessors(List<Professor> professors) {
+        this.professors = professors;
+    }
+
+    public List<Course> getCourses() {
+        return courses;
+    }
+
+    public void setCourses(List<Course> courses) {
+        this.courses = courses;
+    }
+
+    
 }

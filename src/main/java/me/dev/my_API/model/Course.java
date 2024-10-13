@@ -23,4 +23,46 @@ public class Course {
 
     @ManyToMany
     private List<Student> students;
+
+    public void addStudent(Student student) {
+        this.students.add(student);
+    }
+
+    public void removeStudent(Student student) {
+        this.students.remove(student);
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getCode() {
+        return code;
+    }
+
+    public void setCode(String code) {
+        this.code = code;
+    }
+
+    public Professor getProfessor() {
+        return professor;
+    }
+
+    public void setProfessor(Professor professor) {
+        this.professor = professor;
+    }
+
+    public List<Student> getStudents() {
+        return students;
+    }
+
+    public void setStudents(List<Student> students) {
+        this.students = students;
+    }
+
+    
 }

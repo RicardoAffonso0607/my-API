@@ -21,6 +21,38 @@ public class University {
     @OneToMany
     private List<Department> departments;
 
+    public void addDepartment(Department department) {
+        this.departments.add(department);
+    }
 
+    public void removeDepartment(Department department) {
+        this.departments.remove(department);
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getLocation() {
+        return location;
+    }
+
+    public void setLocation(String location) {
+        this.location = location;
+    }
+
+    public List<Department> getDepartments() {
+        return departments;
+    }
+
+    public void setDepartments(List<Department> departments) {
+        this.departments = departments;
+    }
+
+    
 
 }

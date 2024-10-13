@@ -7,17 +7,17 @@ This project
 ```mermaid
 classDiagram
     class University {
-        +String name
-        +String location
-        +List<Department> departments
+        -String name
+        -String location
+        -List<Department> departments
         +addDepartment(Department department)
         +removeDepartment(Department department)
     }
 
     class Department {
-        +String name
-        +List<Course> courses
-        +List<Professor> professors
+        -String name
+        -List<Course> courses
+        -List<Professor> professors
         +addCourse(Course course)
         +removeCourse(Course course)
         +addProfessor(Professor professor)
@@ -25,33 +25,31 @@ classDiagram
     }
 
     class Course {
-        +String title
-        +String code
-        +int credits
-        +List<Student> students
+        -String name
+        -String code
+        -List<Student> students
         +addStudent(Student student)
         +removeStudent(Student student)
     }
 
     class Student {
-        +String name
-        +String studentId
-        +List<Course> courses
-        +enrollInCourse(Course course)
-        +dropCourse(Course course)
+        -String name
+        -List<Course> courses
+        +addCourse(Course course)
+        +removeCourse(Course course)
     }
 
     class Professor {
-        +String name
-        +String employeeId
-        +List<Course> courses
-        +teachCourse(Course course)
-        +stopTeachingCourse(Course course)
+        -String name
+        -List<Course> courses
+        -Department department
+        +addCourse(Course course)
+        +removeCourse(Course course)
     }
 
-    University "1" -- "0..*" Department : has
-    Department "1" -- "0..*" Course : offers
-    Course "0..*" -- "0..*" Student : enrolls
-    Department "1" -- "0..*" Professor : employs
-    Professor "0..*" -- "0..*" Course : teaches
+    University "1" *-- "0..*" Department : has
+    Department "1" o-- "0..*" Course : offers
+    Department "1" o-- "0..*" Professor : employs
+    Course "0..*" o-- "0..*" Student : enrolls
+    Professor "1" o-- "0..*" Course : teaches
 ```
