@@ -4,6 +4,8 @@
 
 This REST API was made to abstract an University Academic System. The main classes can be observed in the diagram below.
 
+Link to acess the API: my-api-production-1b58-prd.up.railway.app
+
 ## Technologies used
 
 - Java Spring Boot
