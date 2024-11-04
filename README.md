@@ -1,5 +1,7 @@
 # Java RESTful API made with Spring Boot
 
+## WORK STILL IN PROGRESS
+
 ## Overview
 
 This REST API was made to abstract an University Academic System. The main classes can be observed in the diagram below.
