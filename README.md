@@ -1,12 +1,12 @@
 # Java RESTful API made with Spring Boot
 
-## WORK STILL IN PROGRESS
+## PROJECT STILL IN PROGRESS
 
 ## Overview
 
 This REST API was made to abstract an University Academic System. The main classes can be observed in the diagram below.
 
-Link to acess the API: my-api-production-1b58-prd.up.railway.app
+Link to acess the API: [API](https://my-api-production-1b58-prd.up.railway.app/swagger-ui/index.html)
 
 ## Technologies used
 
